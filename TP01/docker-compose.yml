@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  backend:
+    build: ./backend/simple-api-student
+    networks:
+      - app-network
+    depends_on:
+      - database
+
+  database:
+    build: ./database
+    networks:
+      - app-network
+    volumes:
+      - ~/shared-docker:/var/lib/postgresql/data
+
+  httpd:
+    build: ./http
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8090:8080"
+    networks:
+      - app-network
+    depends_on:
+      - database
+
+networks:
+  app-network:
+    driver: bridge
+
