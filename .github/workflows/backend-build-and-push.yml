@@ -25,4 +25,4 @@ jobs:
           # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/simple-api:1.0.O
 
-          push: ${{ github.ref == 'refs/heads/master' }}
+          push: "true"
