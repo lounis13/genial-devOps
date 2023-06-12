@@ -3,6 +3,8 @@ on:
     workflows: [main]
     types:
       - completed
+  push:
+    branches: [master]
 
 jobs:
   build-and-push-docker-image:
