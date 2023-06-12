@@ -1,12 +1,10 @@
 name: ci
+
 on:
   workflow_run:
-    workflows:
-      - ci
-    types:
-      - completed
-  push:
-    branches: [master]
+    workflows: [ci]
+    types: [completed]
+    branches: [ master ]
 
 
 jobs:
