@@ -28,12 +28,7 @@ jobs:
      #finally build your app with the latest command
       - name: Build and test with Maven
         run: mvn clean verify
-
-  sonar:
-    needs: test-backend
-    runs-on: ubuntu-latest
-    steps:
-      - name: SonarCloud Scan
+      - name: sonar
         run: mvn -B verify sonar:sonar -Dsonar.projectKey=devops-2023 -Dsonar.organization=devops-school -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
 
