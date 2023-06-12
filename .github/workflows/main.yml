@@ -46,7 +46,7 @@ jobs:
 
       - name: Build image and push database
         working-directory: ..
-        run: ls.
+        run: ls .
 
 
       - name: Build image and push httpd
