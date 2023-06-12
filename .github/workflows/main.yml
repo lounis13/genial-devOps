@@ -6,6 +6,10 @@ on:
     branches: ["master", "ci"]
   pull_request:
 
+defaults:
+  run:
+    working-directory: ./TP01/backend
+
 jobs:
   test-backend:
     runs-on: ubuntu-22.04
