@@ -3,7 +3,7 @@ name: CI devops 2023
 on:
   #to begin you want to launch this job in main and develop
   push:
-    branches: master
+    branches: [master]
   pull_request:
 
 defaults:
@@ -27,7 +27,7 @@ jobs:
 
      #finally build your app with the latest command
       - name: Build and test with Maven
-        run: mvn -B clean verify --file pom.xml
+        run: mvn clean verify
         
   build-and-push-docker-image:
     needs: test-backend
@@ -45,7 +45,7 @@ jobs:
           # relative path to the place where source code with Dockerfile is located
           context: ./TP01/backend/simple-api-student
           # Note: tags has to be all lower-case
-          tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops/simple-api
+          tags:  ${{secrets.DOCKERHUB_USERNAME}}/devops
 
           push: "true"
 
@@ -57,7 +57,7 @@ jobs:
           # Note: tags has to be all lower-case
           tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops/database
 
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/master' }}
 
 
       - name: Build image and push httpd
@@ -68,4 +68,4 @@ jobs:
           # Note: tags has to be all lower-case
           tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops/httpd
 
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/master' }}
