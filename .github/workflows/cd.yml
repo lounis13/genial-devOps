@@ -1,7 +1,8 @@
-name: run CD
+name: ci
 on:
   workflow_run:
-    workflows: [main]
+    workflows:
+      - ci
     types:
       - completed
   push:
