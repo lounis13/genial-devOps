@@ -3,6 +3,10 @@ FROM maven:3.8.6-amazoncorretto-17 AS myapp-build
 ENV MYAPP_HOME /opt/myapp
 WORKDIR $MYAPP_HOME
 COPY pom.xml .
+
+# Download dependencies when pom.xml file has not changed
+RUN mvn dependency:go-offline
+
 COPY src ./src
 RUN mvn package -DskipTests
 
