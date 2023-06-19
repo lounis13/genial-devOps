@@ -1,4 +1,4 @@
-# TP 02
+# TP 02 - Github Actions
 
 ___
 ***Lounis BOULDJA    |   TP 02    |     devOps 2022 2023***
@@ -17,10 +17,3 @@ Voici une explication détaillée du processus automatisé avec trois [workflows
 - [db-http-build-and-push.yml](..%2F.github%2Fworkflows%2Fdb-http-build-and-push.yml) : Ce workflow est déclenché indépendamment de la réussite des workflows précédents, et cela lors d'un événement "push" sur la branche "master". Il réalise une connexion à DockerHub, construit les images Docker pour la base de données et le serveur httpd de l'application à partir de leurs Dockerfiles respectifs, et les pousse vers DockerHub.
 
 Ainsi, ces workflows assurent une automatisation du processus de test, de build et de déploiement de l'application. Le second workflow est particulièrement intéressant, car il crée une dépendance de réussite avec le premier, garantissant ainsi l'intégrité et la fiabilité du code avant sa mise en production.
-
-
-<footer style="margin-top: 2rem; width: 95%; display: flex; align-items: center; justify-content: space-between; box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0,0,0,0.06) 0 0 0 1px; border-radius: .5rem; padding: .4rem 1rem; background-color: rgba(255,255,255,0.07)">
-    <b>👨‍💻 Lounis BOULDJA</b>
-    <img alt="devOps" height="48" src="https://www.plunge.cloud/hs-fs/hubfs/cycle-devopsea2b.png?width=600&name=cycle-devops.png">
-    <b><i>GENIAL</i>  🎓 2022 - 2023</b>
-</footer>

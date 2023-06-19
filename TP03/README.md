@@ -1,4 +1,4 @@
-# TP 03
+# TP 03 - Ansible
 
 ___
 ***Lounis BOULDJA    |   TP 03    |     devOps 2022 2023***
@@ -36,11 +36,3 @@ ansible-playbook -i inventories/setup.yml playbook.yml
 Une fois le playbook exécuté avec succès, tous les rôles spécifiés dans le playbook seront appliqués aux hôtes de l'inventaire. Cela inclut l'installation de Docker, la création du réseau, le lancement de la base de données, de l'application, du front-end, et du serveur HTTPD.
 
 Enfin, une fois le déploiement terminé, l'application sera accessible à l'adresse suivante : http://lounisboulja.takima.cloud/. Il s'agit de l'URL du serveur où l'application a été déployée.
-
-
-
-<footer style="margin-top: 2rem; width: 95%; display: flex; align-items: center; justify-content: space-between; box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0,0,0,0.06) 0 0 0 1px; border-radius: .5rem; padding: .4rem 1rem; background-color: rgba(255,255,255,0.07)">
-    <b>👨‍💻 Lounis BOULDJA</b>
-    <img alt="devOps" height="48" src="https://www.plunge.cloud/hs-fs/hubfs/cycle-devopsea2b.png?width=600&name=cycle-devops.png">
-    <b><i>GENIAL</i>  🎓 2022 - 2023</b>
-</footer>

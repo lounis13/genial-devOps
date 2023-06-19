@@ -10,6 +10,10 @@ Ce dépôt couvre les travaux pratiques réalisés dans le cadre du cours DevOps
 
 ### [3. TP 03 - Ansible](TP03%2FREADME.md)
 
+<br>
+
+___ 
+
 <footer style="margin-top: 2rem; width: 95%; display: flex; align-items: center; justify-content: space-between; box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0,0,0,0.06) 0 0 0 1px; border-radius: .5rem; padding: .4rem 1rem; background-color: rgba(255,255,255,0.07)">
     <b>👨‍💻 Lounis BOULDJA</b>
     <img alt="devOps" height="48" src="https://www.plunge.cloud/hs-fs/hubfs/cycle-devopsea2b.png?width=600&name=cycle-devops.png">
