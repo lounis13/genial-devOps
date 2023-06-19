@@ -3,3 +3,6 @@
       docker_network:
         name: app-network
 
+    - name: Create Volume
+      docker_volume:
+        name: shared-docker

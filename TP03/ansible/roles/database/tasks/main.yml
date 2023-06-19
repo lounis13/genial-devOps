@@ -10,4 +10,4 @@
         networks:
           - name: app-network
         volumes:
-          - "shared-docker:/path/in/container"
+          - "shared-docker:/var/lib/postgresql/data"
