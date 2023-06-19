@@ -1,0 +1,7 @@
+---
+    - name: Run front
+      docker_container:
+        name: front
+        image: poca2022/front
+        networks:
+          - name: app-network

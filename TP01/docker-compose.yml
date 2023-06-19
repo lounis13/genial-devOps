@@ -8,6 +8,13 @@ services:
     depends_on:
       - database
 
+  front:
+    build: ../TP03/devops-front
+    networks:
+      - app-network
+    depends_on:
+      - database
+
   database:
     build: ./database
     networks:

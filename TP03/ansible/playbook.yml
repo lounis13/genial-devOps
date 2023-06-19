@@ -7,4 +7,5 @@
     - create-network
     - database
     - app
+    - front
     - httpd
