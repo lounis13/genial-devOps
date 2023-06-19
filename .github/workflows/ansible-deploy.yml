@@ -2,7 +2,7 @@ name: ansible deploy
 
 on:
   workflow_run:
-    workflows: [cd]
+    workflows: [backend-build-and-push]
     types: [completed]
     branches: [ master ]
 

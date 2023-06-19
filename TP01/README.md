@@ -120,7 +120,12 @@ ___
   - httpd : ce service construit une image à partir du Dockerfile dans le répertoire ./httpd. Il expose le port 80 et dépend du service backend. Il est également connecté au réseau app-network.
   - adminer : ce service utilise l'image Docker officielle d'Adminer. Il expose le port 8090 et dépend du service database. Il est également connecté au réseau app-network.
 
-  Le fichier définit également un réseau, appelé app-network. Tous les services de votre application communiquent sur ce réseau.
+  Le fichier définit également un réseau, appelé app-network. Tous les services de votre application communiquent sur ce réseau. 
+  
+  - Pour executer le docker compose :
+  ```shell
+    docker-compose up
+  ```
 
 ## Publication
 - **Commandes pour publier les images :**

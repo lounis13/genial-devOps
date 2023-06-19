@@ -1,4 +1,4 @@
-name: cd
+name: backend-build-and-push
 
 on:
   workflow_run:
@@ -24,5 +24,3 @@ jobs:
           context: ./TP01/backend/simple-api-student
           # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/simple-api
-
-          push: ${{ github.ref == 'refs/heads/master' }}
