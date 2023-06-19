@@ -1,0 +1,13 @@
+---
+    - name: Run database
+      docker_container:
+        name: database
+        image: poca2022/database
+        env:
+          POSTGRES_USER: "usr"
+          POSTGRES_PASSWORD: "pwd"
+          POSTGRES_DB: "db"
+        networks:
+          - name: app-network
+        volumes:
+          - "shared-docker:/path/in/container"

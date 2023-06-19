@@ -1,0 +1,33 @@
+name: ansible deploy
+
+on:
+  workflow_run:
+    workflows: [cd]
+    types: [completed]
+    branches: [ master ]
+
+
+defaults:
+  run:
+    working-directory: ./TP03/ansible/
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass python3-pip
+
+      - name: Install Ansible and Ansible Galaxy
+        run: |
+          pip install ansible
+
+      - name: Run Ansible Playbook
+        run: |
+          ansible --version

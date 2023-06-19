@@ -1,0 +1,9 @@
+---
+    - name: Run httpd
+      docker_container:
+        name: httpd
+        image: poca2022/httpd
+        networks:
+          - name: app-network
+        published_ports:
+          - "80:80"

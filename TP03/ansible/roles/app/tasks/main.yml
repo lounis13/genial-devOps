@@ -1,0 +1,7 @@
+---
+    - name: Run app
+      docker_container:
+        name: backend
+        image: poca2022/simple-api
+        networks:
+          - name: app-network
